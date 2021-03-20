@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="{public_url()}site/img/logotruong.png" />
     
     <script src="{base_url('plugins/jquery-3.5.1.min.js')}"></script>
-    <script src="{base_url('public/plugins/bootstrap.min.css')}"></script>
+    <script src="{base_url('public/plugins/js/bootstrap.min.js')}"></script>
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>

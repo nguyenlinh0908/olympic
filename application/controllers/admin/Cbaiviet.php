@@ -137,10 +137,10 @@
                         'dNgayDang'       => $date,
                     );
 
-                    //thêm mới vào csdl
-					$arrBaiViet = array();
-					array_push($arrBaiViet, $data);
-                    if($this->Mbaiviet->create($arrBaiViet))
+                    // //thêm mới vào csdl
+					// $arrBaiViet = array();
+					// array_push($arrBaiViet, $data);
+                    if($this->Mbaiviet->createPost($data))
                     {
                         //tạo ra nôi dung thông báo
                         $this->session->set_flashdata('message', 'Thêm thành công');
@@ -198,7 +198,7 @@
                     $tieude     = $this->input->post('tieude');
                     $id_loaitin = $this->input->post('loaitin');
                     $tomtat = $this->input->post('tomtat');
-                    $noidung = $this->input->post('content');
+                    $noidung = $this->input->post('noidung');
                     $date = now();
                     //lấy tên file ảnh minh hoạ đc upload lên
                     $this->load->library('upload_library');

@@ -74,17 +74,17 @@
                                 $ten = $this->Mthisinh->tachten($ten);
                                 }
                                 $thisinh = array(
-                                    'sMaSinhVien' => $row[7],
+                                    'sMaSinhVien' => mb_convert_case($row[7], MB_CASE_UPPER, "UTF-8"),
                                     'FK_sMaKhoa'  => ($user->sMaKhoa != 13)?$user->sMaKhoa:$this->input->post('khoa'),
-                                    'sMaMon'      => $row[8],
-                                    'sHoTenDem'   => $ten['hodem'],
-                                    'sTen'        => $ten['ten'],
-                                    'sLop'        => $row[6],
-                                    'sGioiTinh'   => $row[3],
+                                    'sMaMon'      => mb_convert_case($row[8], MB_CASE_TITLE, "UTF-8"),
+                                    'sHoTenDem'   => mb_convert_case($ten['hodem'], MB_CASE_TITLE, "UTF-8"),
+                                    'sTen'        => mb_convert_case($ten['ten'], MB_CASE_TITLE, "UTF-8"),
+                                    'sLop'        => mb_convert_case($row[6], MB_CASE_TITLE, "UTF-8"),
+                                    'sGioiTinh'   => mb_convert_case($row[3], MB_CASE_TITLE, "UTF-8"),
                                     'dNgaySinh'   => strtotime($row[2]),
                                     'sSDT'        => $row[5],
                                     'sEmail'      => $row[4],
-                                    'sGhiChu'     => $row[9],
+                                    'sGhiChu'     => mb_convert_case($row[9], MB_CASE_TITLE, "UTF-8"),
                                     'sTruong'     => 'ĐH Mở Hà Nội',
                                     'sNamThi'     => substr($today,6,4)
                                 );

@@ -37,6 +37,13 @@ class MY_Model extends CI_Model {
 		}
 		
 	}
+	function createPost($data){
+		if(!empty($data)){
+			$this->db->insert($this->table, $data);
+		}else{
+			return false;
+		}
+	}
 	
 	/*
 	 * Cap nhat row tu id

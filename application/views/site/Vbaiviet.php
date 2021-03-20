@@ -11,7 +11,7 @@
                         <div class="panel-body in-danhmuc nd-thongbao">
                             <div class="noidung" style="text-align: justify">
                                 {$baiviet->tNoiDung}
-                                <img style="width: 100%; height:100%;" src="{base_url('upload/product/')}{$baiviet->sHinhAnhMinhHoa}">
+                                <!-- <img style="width: 100%; height:100%;" src="{base_url('upload/product/')}{$baiviet->sHinhAnhMinhHoa}"> -->
                             </div>
                             <div class="lienquan">
                                 <h4><b>Tin liên quan</b></h4>
