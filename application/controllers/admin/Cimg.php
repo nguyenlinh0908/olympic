@@ -86,7 +86,7 @@
             $dau = 'tn';
             if($this->input->post()){
                 
-                $this->form_validation->set_rules('tieude', 'Tiêu đề', 'required');
+                $this->form_validation->set_rules('tieude', 'Tiêu đề');
                 $this->form_validation->set_rules('type', 'Thể loại', 'required');
                 $this->form_validation->set_rules('image', '', 'callback_file_check');
                 
@@ -186,7 +186,7 @@
             
             $dau = 'tn';
             if($this->input->post()){
-                $this->form_validation->set_rules('tieude', 'Tiêu đề', 'required');
+                $this->form_validation->set_rules('tieude', 'Tiêu đề');
                 $this->form_validation->set_rules('type', 'Thể loại', 'required');
                 $this->form_validation->set_rules('image', '', 'callback_file_check');
                 //nhập liệu chính xác
