@@ -8,7 +8,7 @@
 		
 		<div class="horControlB menu_action">
 			<ul>
-				<li><a href="{base_url('admintimeline')}">
+				<li><a href="{base_url('admin/admintimeline')}">
 					<img src="{public_url('admin')}/images/icons/control/16/list.png">
 					<span>Danh sách</span>
 				</a></li>

@@ -12,7 +12,7 @@
 					<span>Thêm mới</span>
 				</a></li> -->
 				
-				<li><a href="{admin_url('Ctimeline/index')}">
+				<li><a href="{base_url('admin/admintimeline')}">
 					<img src="{public_url('admin')}/images/icons/control/16/list.png">
 					<span>Danh sách</span>
 				</a></li>
@@ -69,7 +69,7 @@
 					<td class="textC">{date('d-m-Y', $r.sThoiGian)}</td>
 					
 					<td class="option textC">
-						 <a class="tipS" value="{$r.idVongThi}" title="Chỉnh sửa" href="{base_url('edit-timeline/')}{$r.idVongThi}">
+						 <a class="tipS" value="{$r.idVongThi}" title="Chỉnh sửa" href="{base_url('admin/edit-timeline/')}{$r.idVongThi}">
 							<img src="{public_url('admin/images')}/icons/color/edit.png">
 						</a>
 					</td>
@@ -81,5 +81,3 @@
 	</div>
 	
 </div>
-
-

@@ -11,12 +11,12 @@
         </div>
         <div class="horControlB menu_action">
             <ul>
-                <li><a href="{base_url('thembaiviet')}">
+                <li><a href="{base_url('admin/thembaiviet')}">
                     <img src="{public_url('admin')}/images/icons/control/16/add.png">
                     <span>Thêm mới</span>
                     </a>
                 </li>
-                <li><a href="{base_url('adminbaiviet')}">
+                <li><a href="{base_url('admin/adminbaiviet')}">
                     <img src="{public_url('admin')}/images/icons/control/16/list.png">
                     <span>Danh sách</span>
                     </a>

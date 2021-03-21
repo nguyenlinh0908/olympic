@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="{public_url()}site/style.css">
     <link rel="shortcut icon" href="{public_url()}site/img/logotruong.png" />
     
+    <script type="text/javascript" src="{public_url('site/js/jquery-1.10.2.min.js')}"></script>
     <script src="{base_url('plugins/jquery-3.5.1.min.js')}"></script>
-    <script src="{base_url('public/plugins/js/bootstrap.min.js')}"></script>
+    <!-- <script src="{base_url('public/plugins/js/bootstrap.min.js')}"></script> -->
 
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>

@@ -12,12 +12,12 @@
 		
 		<div class="horControlB menu_action">
 			<ul>
-				<li><a href="{base_url('themtainguyen')}">
+				<li><a href="{base_url('admin/themtainguyen')}">
 					<img src="{public_url('admin')}/images/icons/control/16/add.png">
 					<span>Thêm mới</span>
 				</a></li>
 				
-				<li><a href="{base_url('admintainguyen')}">
+				<li><a href="{base_url('admin/admintainguyen')}">
 					<img src="{public_url('admin')}/images/icons/control/16/list.png">
 					<span>Danh sách</span>
 				</a></li>

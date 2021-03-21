@@ -1,5 +1,5 @@
 <?php
-class Cbaiviet extends CI_Controller{
+class Cbaiviet extends MY_Controller{
     function __construct(){
         parent::__construct();
     }

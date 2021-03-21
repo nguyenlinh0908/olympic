@@ -364,7 +364,7 @@ class Cform extends CI_Controller{
         setToast('error', 'Không tồn tại sinh viên này');
         if($thisinh->FK_sMaKhoa != getSession()->sMaKhoa && $check != 0){
             setToast('error', 'Không tồn tại sinh viên này');
-            redirect('admindanhsach');
+            redirect('Clist');
         }
         if($this->Mthisinh->delete($id)){
             $image_link = './upload/minhchung/'.$thisinh->sMinhchung;
@@ -373,7 +373,7 @@ class Cform extends CI_Controller{
                 unlink($image_link);
             }
             setToast('info', 'Xoá thành công');
-            redirect('admindanhsach');
+            redirect('Clist');
         }
     }
 

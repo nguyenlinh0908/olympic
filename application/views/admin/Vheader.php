@@ -6,19 +6,19 @@
 		
 		<div class="userNav">
 			<ul>
-				<li><a href="{base_url('admintrangchu')}">
+				<li><a href="{base_url('trangchu')}">
 					<span><i class="fas fa-home"></i> Trang chủ</span>
 				</a></li>
-				<li><a href="{base_url('adminbaiviet')}" >
+				<li><a href="{base_url('admin/adminbaiviet')}" >
 					<span><i class="far fa-file-alt"></i> Bài viết</span>
 				</a></li>
-				<li><a href="{base_url('admintainguyen')}" >
+				<li><a href="{base_url('admin/admintainguyen')}" >
 					<span><i class="far fa-images"></i> Ảnh,video</span>
 				</a></li>
-				<li><a class="active" id="current" href="{base_url('admintimeline')}" >
+				<li><a class="active" id="current" href="{base_url('admin/admintimeline')}" >
 					<span><i class="fas fa-volume-up"></i> Timeline</span>
 				</a></li>
-				<li><a class="active" id="current" href="{base_url('admintaikhoan')}" >
+				<li><a class="active" id="current" href="{base_url('admin/admintaikhoan')}" >
 					<span><i class="fas fa-user"></i> Accounts</span>
 				</a></li>
 				<!-- Logout -->

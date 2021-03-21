@@ -18,7 +18,7 @@ class Login extends MY_Controller
                     'quyen'		=> $account->sIDQuyen,
                 );
                 $this->session->set_userdata('admin', $session);
-                redirect(base_url('adminbaiviet'));
+                redirect(base_url('admin/adminbaiviet'));
             }
         }
         //load view trang đăng nhập

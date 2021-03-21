@@ -7,12 +7,12 @@
 		
 		<div class="horControlB menu_action">
 			<ul>
-				<li><a href="{base_url('themtainguyen')}">
+				<li><a href="{base_url('admin/themtainguyen')}">
 					<img src="{public_url('admin')}/images/icons/control/16/add.png">
 					<span>Thêm mới</span>
 				</a></li>
 				
-				<li><a href="{base_url('admintainguyen')}">
+				<li><a href="{base_url('admin/admintainguyen')}">
 					<img src="{public_url('admin')}/images/icons/control/16/list.png">
 					<span>Danh sách</span>
 				</a></li>
@@ -118,7 +118,7 @@
 					<td class="textC">{date('d-m-Y', $row.dNgayTao)}</td>
 					
 					<td class="option textC">
-						 <a class="tipS" value="{$row.sIDAnh}" title="Chỉnh sửa" href="{base_url('edit-img/')}{$row.sIDAnh}">
+						 <a class="tipS" value="{$row.sIDAnh}" title="Chỉnh sửa" href="{base_url('admin/edit-img/')}{$row.sIDAnh}">
 							<img src="{public_url('admin/images')}/icons/color/edit.png">
 						</a>
 						
@@ -134,5 +134,3 @@
 	</div>
 	
 </div>
-
-
