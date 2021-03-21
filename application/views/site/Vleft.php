@@ -11,7 +11,7 @@
                     </div>
                     <div class="panel-body nd-thongbao">
                         <div class="tintuc row">
-                            <p style="font-size: 16px;
+                            <a href="{base_url('baiviet/')}{$dangcai[0]['sIDBaiviet']}"  style="display: block; font-size: 16px;
     color: #337ab7; text-align:justify;">{$dangcai[0]['tTomTat']}</p>
                         </div>
                     </div>
