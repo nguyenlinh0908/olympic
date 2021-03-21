@@ -150,6 +150,8 @@ button:focus{
                 <a href="{base_url('Cimport/filemau')}" class="import-btn">
                     <div class="hint-text"><i class="fa fa-file-excel-o" aria-hidden="true"></i> | File mẫu</div>
                 </a>
+                <p>Lưu ý: Trong file mẫu <br>
+                Cột môn thi: 1 là kí hiệu cho môn tin học, 2 là kí hiệu cho môn tiếng anh <br></p>
             </div>
         </div>
     </form>
