@@ -34,7 +34,7 @@
                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                             </div>
                             <div class="tieude col-lg-10">
-                                <a href="{base_url('Cbaiviet/view/')}{$r.sIDBaiviet}">{$r.sTieuDe}</a>
+                                <a href="{base_url('baiviet/')}{$r.sIDBaiviet}">{$r.sTieuDe}</a>
                                 <div class="date">
                                     <i class="fa fa-calendar" aria-hidden="true"> {date("d-m-Y", $r.dNgayDang)}</i>
                                 </div>
@@ -61,7 +61,7 @@
                             <i class="fa fa-book" aria-hidden="true"></i>
                             </div>
                             <div class="tieude col-lg-10">
-                                <a href="{base_url('Cbaiviet/view/')}{$r.sIDBaiviet}">{$r.sTieuDe}</a>
+                                <a href="{base_url('baiviet/')}{$r.sIDBaiviet}">{$r.sTieuDe}</a>
                                 <div class="date">
                                     <i class="fa fa-calendar" aria-hidden="true"> {date("d-m-Y", $r.dNgayDang)}</i>
                                 </div>
@@ -72,4 +72,3 @@
                 </div>
             </div>
         </div>
-        
