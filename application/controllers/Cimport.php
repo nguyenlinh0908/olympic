@@ -70,6 +70,10 @@
                         if(isset($data)){
                             foreach($data as $k => $row){  
                                 if($k > 0){
+
+                                    if($row[0] == ''){
+                                        break;
+                                    }
                                     $ten = $row[1];
                                     if($ten != ''){
                                     $ten = $this->Mthisinh->tachten($ten);
@@ -117,7 +121,7 @@
                                         
                                     }
                                 }
-                                //$numRow++;
+                                $numRow++;
                             }
                         }
                         $this->Mthisinh->create($dssv);
