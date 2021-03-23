@@ -33,6 +33,7 @@ $route['admin/edit-timeline/(:num)']           = 'admin/Ctimeline/edit/$1';
 $route['admin/themtimeline']           = 'admin/Ctimeline/add';
 $route['admin/admintaikhoan']           = 'admin/Caccount';
 $route['admin/themtaikhoan']           = 'admin/Caccount/add';
+$route['filemau']           = 'Cimport/filemau';
 // $route['dstaikhoan']           = 'admin/Caccount/index';
 $route['admin/edit/(:num)']              = 'admin/Cbaiviet/edit/$1';
 $route['admin/edit-taikhoan/(:num)']      = 'admin/Caccount/edit/$1';

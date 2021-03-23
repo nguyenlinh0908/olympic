@@ -147,11 +147,9 @@ button:focus{
                 <button style="border: none; background: none;" class="add-btn btn" id="dangky" disabled="disabled" value="dangky" type="submit" name="dangky">
                     <div class="hint-text"><i class="fa fa-plus" aria-hidden="true"></i> | Đăng ký</div>
                 </button>
-                <a href="{base_url('Cimport/filemau')}" class="import-btn">
+                <a href="{base_url('filemau')}" class="import-btn">
                     <div class="hint-text"><i class="fa fa-file-excel-o" aria-hidden="true"></i> | File mẫu</div>
                 </a>
-                <p>Lưu ý: Trong file mẫu <br>
-                Cột môn thi: 1 là kí hiệu cho môn tin học, 2 là kí hiệu cho môn tiếng anh <br></p>
             </div>
         </div>
     </form>

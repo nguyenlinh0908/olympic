@@ -4,16 +4,16 @@ class Mthisinh extends MY_Model{
     var $key ='sIdThisinh';
 
     function tachten($ten){
-        $fullName = $ten;
-        $arrName = explode(" ", $fullName);
-        $firstName = array_shift($arrName);
-        $lastName = array_pop($arrName); 
+        $fullName   = $ten;
+        $arrName    = explode(" ", $fullName);
+        $firstName  = array_shift($arrName);
+        $lastName   = array_pop($arrName); 
         $middleName = implode(" ", $arrName);
-        $hotendem = $firstName. " " .$middleName;
+        $hotendem   = $firstName. " " .$middleName;
 
         $ten = array(
             'ten'     => $lastName,
-            'hodem'      => $hotendem,
+            'hodem'   => $hotendem,
         );
         return $ten;
     }

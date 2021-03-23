@@ -100,7 +100,7 @@ class Clist extends CI_Controller{
             'C8'    => 'Trường',
             'D8'    => 'Khoa',
             'E8'    => 'Môn',
-            'F8'    => 'Họ và',
+            'F8'    => 'Họ đệm',
             'G8'    => 'Tên',
             'H8'    => 'Mã SV',
             'I8'    => 'Ghi chú'
@@ -183,29 +183,27 @@ class Clist extends CI_Controller{
             'A' => 5,
             'B' => 5,
             'C' => 25,
-            'D' => 25,
+            'D' => 30,
             'E' => 15,
             'F' => 20,
-            'G' => 15,
+            'G' => 10,
             'H' => 15,
             'I' => 10,
         );
         foreach($array_column as $key => $value){
             $sheet->getColumnDimension($key)->setAutoSize(false);
-            $sheet->getColumnDimension($key)->setWidth($value);
+           $sheet->getColumnDimension($key)->setWidth($value);
         }
         $sheet->getStyle("A8:I".($row-1))->getAlignment()->setWrapText(true);
 
-        // size, đinh hướng
-        // $sheet->getPageSetup()->setOrientation(PageSetup::ORIENTATION_LANDSCAPE);
-        // $sheet->getPageSetup()->setPaperSize(PageSetup::PAPERSIZE_A4);
-        // // căn lề
-        // $sheet->getPageMargins()->setTop(1);
-        // $sheet->getPageMargins()->setRight(0.75);
-        // $sheet->getPageMargins()->setLeft(0.75);
-        // $sheet->getPageMargins()->setBottom(1);
-        // $spreadsheet->getActiveSheet()->getPageSetup()->setFitToWidth(1);
-        // $spreadsheet->getActiveSheet()->getPageSetup()->setFitToHeight(1);
+        // size và xác định hướng khổ giấy được in ra
+        $sheet->getPageSetup()->setOrientation(PHPExcel_Worksheet_PageSetup::ORIENTATION_PORTRAIT);
+        $sheet->getPageSetup()->setPaperSize(PHPExcel_Worksheet_PageSetup::PAPERSIZE_A4);
+        $sheet->getPageSetup()->setFitToPage(true);
+        $sheet->getPageSetup()->setFitToWidth(1);
+        $sheet->getPageSetup()->setFitToHeight(0);
+
+
 
         $filename = 'DSOLYMPIC'.substr($today,6,4);
         ob_end_clean();
