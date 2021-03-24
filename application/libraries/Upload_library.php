@@ -5,19 +5,28 @@ Class Upload_library
     function __construct()
     {
         $this->CI = & get_instance();
+        $this->CI->load->library('upload');
     }
     
   
 
 
 
-    function upload($upload_path = '', $file_name = '', $dau = '')
+    function upload($upload_path, $file_name = '', $dau = '', $dau_hoso = '',$masv='')
     {
+       
+        //pre($upload_path);
         if (!file_exists($upload_path)){
             @mkdir($upload_path, 0777, true);
         }
-        $config = $this->config($upload_path, $dau);
-        $this->CI->load->library('upload', $config);
+        $config = $this->config($upload_path, $dau, $dau_hoso,$masv);
+        // if($upload_path == './upload/minhchung'){
+        //     pre($config);
+        // } else if($upload_path == './upload/hoso'){
+        //     pre($config);
+        // }
+        $this->CI->upload->initialize($config);
+
         //thuc hien upload
         if($this->CI->upload->do_upload($file_name))
         {
@@ -72,7 +81,7 @@ Class Upload_library
     /*
      * Cau hinh upload file
      */
-    function config($upload_path = '', $dau = '')
+    function config($upload_path = '', $dau = '',$dau_hoso = '', $masv='')
     {
         //Khai bao bien cau hinh
         $config = array();
@@ -87,8 +96,13 @@ Class Upload_library
         //Chiều cao tối đa
         $config['max_height']    = '10280';
 
-        $random = time();
-        $new_name = $dau. "-" .$random;
+        // $random = time();
+        // $random = time();
+        // $new_name = $dau. "-" .$random;
+        // $config['file_name'] = $new_name;
+        // $random = $dinhDanh;
+        
+        $new_name = $dau. "-" .$masv;
         $config['file_name'] = $new_name;
         
         return $config;

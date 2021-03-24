@@ -68,6 +68,35 @@
                                     </div>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                    <div class="col-lg-12">
+                                        <label><b>Ảnh hồ sơ (*Tải ảnh hồ sơ tỷ lệ 3x4)</b></label>
+                                        <span style="color: red;">*</span>
+                                        <input type="file" class="form-control" id="image_hoso" name="image_hoso" multiple="true">
+                                        <a style="text-align:right !important;
+    border-width: 0 2px 2px;
+    font-weight: bold;
+    border-color: #ad9a9a;
+    margin-top: -2px;" onclick="PreviewImage();" class="btn" width="100%" alt="" data-toggle="modal" data-target="#myModal">Xem trước</a>
+                                    </div>
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <img frameborder="0" scrolling="no" class="hide-album" id="blah" src="#" 
+                                                        class="fluid modal-title" style="overflow:hidden;height:100%;width:100%" 
+                                                        height="100%" width="100%" alt="image_hoso">
+                                                        <figcaption  class="figure-caption text-center"></figcaption>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div name="name_error" style="margin-top: -25px;" class="clear error">{form_error('image')}</div>
+                                    </div>
+                                    </div>
                                 
                                
                             </div>
@@ -121,7 +150,7 @@
                                         <div class="select" style="text-align:right;">
                                             <label style="text-align:left !important;"><b>Ảnh minh chứng (*Tải lên ảnh chụp thẻ sinh viên, CCCD hoặc CMND)</b></label>
                                             <span style="color: red;">*</span>
-                                            <input type="file" class="form-control" id="image" name="image">
+                                            <input type="file" class="form-control" id="image" name="image" multiple="true">
                                             <a style="text-align: right;
     border-width: 0 2px 2px;
     font-weight: bold;
@@ -197,9 +226,12 @@
   }
 }
 
-$("#image").change(function() {
+$("#image, #image_hoso").change(function() {
   readURL(this);
 });
+// $("#image_hoso").change(function() {
+//   readURL(this);
+// });
     </script>
 
-	<script src ="{base_url()}public/js/publicForm.js"></script>
+	<!-- <script src ="{base_url()}public/js/publicForm.js"></script> -->

@@ -1,4 +1,4 @@
-<?php
+ <?php
 class Cform extends CI_Controller{
     function __construct(){
         parent::__construct();
@@ -267,6 +267,7 @@ class Cform extends CI_Controller{
         {
             $this->form_validation->set_rules('hoten', 'Họ và tên', 'required');
             $this->form_validation->set_rules('dob', 'Ngày sinh', 'required');
+            $this->form_validation->set_rules('image_hoso', 'Ảnh hồ sơ', 'callback_file_check');
             $this->form_validation->set_rules('sdt', 'Số điện thoại', 'required|numeric|min_length[10]|max_length[10]');
             $this->form_validation->set_rules('mail', 'Email', 'required|valid_email');
             $this->form_validation->set_rules('truong', 'Đơn vị đào tạo', 'required');
@@ -291,13 +292,22 @@ class Cform extends CI_Controller{
                 $gioitinh = $this->input->post('gioi-tinh');
                 $hinhthuc = 'Tự do';
 
-                $dau ='mc';
+                $dau_hoso ='sv';
                 $this->load->library('upload_library');
-                $upload_path = './upload/minhchung';
-                $upload_data = $this->upload_library->upload($upload_path, 'image', $dau);
+                $upload_path = './upload/hoso';
+                // $dinhDanh = basename($_FILES["masv"]);
+                $upload_data = $this->upload_library->upload($upload_path, 'image_hoso',$dau_hoso,'',$masv);
+                $image_link_hoso = '';
+                if(isset($upload_data['file_name'])){
+                    $image_link_hoso = $upload_data['file_name']; //nếu có ảnh tải lên thì lấy tên ảnh
+                }
+
+                $dau ='mc';
+                // $upload_path2 = './upload/minhchung';
+                $upload_data = $this->upload_library->upload('./upload/minhchung', 'image', $dau,'',$masv);
                 $image_link = '';
                 if(isset($upload_data['file_name'])){
-                    $image_link = $upload_data['file_name']; //nếu có ảnh tải lên thì lấy tên ảnh
+                    $image_link = $upload_data['file_name']; 
                 }
 
                 $info = array(
@@ -315,6 +325,7 @@ class Cform extends CI_Controller{
                     'sGhiChu'		=> $hinhthuc,
                     'sTruong'       => mb_convert_case($truong, MB_CASE_TITLE, "UTF-8"),
                     'sMinhchung'    => $image_link,
+                    'sHoSo'         => $image_link_hoso,
                     'sNamThi'       => date("Y"),
                 );
 
@@ -368,9 +379,10 @@ class Cform extends CI_Controller{
         }
         if($this->Mthisinh->delete($id)){
             $image_link = './upload/minhchung/'.$thisinh->sMinhchung;
-            if(file_exists($image_link))
+            $image_link_hoso = './upload/hoso/'.$thisinh->sHoSo;
+            if(file_exists($image_link && $image_link_hoso))
             {
-                unlink($image_link);
+                unlink($image_link && $image_link_hoso);
             }
             setToast('info', 'Xoá thành công');
             redirect('Clist');
