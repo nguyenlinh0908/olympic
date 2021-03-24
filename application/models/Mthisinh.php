@@ -38,15 +38,14 @@ class Mthisinh extends MY_Model{
     }
 
     public function list_thisinh(){
-        // $this->db->select("*")
-        //             -> from('tbl_thisinh')
-		// 			->join("tbl_monthi", "tbl_monthi.sMaMon = tbl_thisinh.sMaMon")
-        //             ->order_by('sTruong asc, sGhiChu asc, tbl_thisinh.sMaMon desc, sTen asc, sHoTenDem asc');
-        // $result = $this->db->get();
-		$sql = "SELECT * FROM tbl_thisinh, tbl_khoa, tbl_monthi 
-        WHERE tbl_thisinh.FK_sMaKhoa = tbl_khoa.sMaKhoa 
-        and tbl_thisinh.sMaMon = tbl_monthi.sMaMon";
-		$result = $this->db->query($sql);
+        $today = date("d/m/Y"); 
+        $this->db->select('*')
+                -> from('tbl_thisinh AS sv')
+                -> join('tbl_khoa AS k', 'sv.FK_sMaKhoa = k.sMaKhoa', 'inner')
+                -> join('tbl_monthi AS m', 'sv.sMaMon = m.sMaMon', 'inner')
+                -> where('sv.sNamThi',substr($today,6,4))
+                ->order_by('sv.sGhiChu ASC, sv.sMaMon DESC,  sv.sTen ASC, k.sTenKhoa ASC');
+                $result = $this->db->get();
         if($result->num_rows()!=0){
             return $result->result_array();
         }else{
@@ -59,19 +58,21 @@ class Mthisinh extends MY_Model{
     public function layDanhSachThiSinh($khoa, $mon){
 
         $today = date("d/m/Y");
-        $sql = "SELECT tbl_thisinh.sMaSinhVien,tbl_thisinh.sKhoa,tbl_thisinh.sHoTenDem,tbl_thisinh.sTen,tbl_thisinh.sGhiChu,tbl_thisinh.sTruong,tbl_monthi.sTenMon,tbl_monthi.sMaMon,tbl_khoa.sMaKhoa,tbl_khoa.sTenKhoa 
-        FROM tbl_thisinh, tbl_khoa, tbl_monthi 
-        WHERE tbl_thisinh.FK_sMaKhoa = tbl_khoa.sMaKhoa 
-        and tbl_thisinh.sMaMon = tbl_monthi.sMaMon
-        and tbl_thisinh.sNamThi =".substr($today,6,4);
-        if(!empty($mon)){
-            $sql .=" AND tbl_monthi.sMaMon='$mon'";
-        }
-        if($khoa != '13'){
-            $sql .=" AND tbl_khoa.sMaKhoa='$khoa'";
-        }
-        $sql .= " ORDER by tbl_thisinh.sMaMon ASC, tbl_thisinh.sGhiChu ASC, tbl_thisinh.sTen ASC, tbl_khoa.sTenKhoa ASC";
-        return $this->db->query($sql)->result_array();
+        $this->db->select('sv.sMaSinhVien, sv.sKhoa, sv.sHoTenDem, sv.sTen, sv.sGhiChu, sv.sTruong, m.sTenMon, m.sMaMon, k.sMaKhoa, k.sTenKhoa')
+                -> from('tbl_thisinh AS sv')
+                -> join('tbl_khoa AS k', 'sv.FK_sMaKhoa = k.sMaKhoa', 'inner')
+                -> join('tbl_monthi AS m', 'sv.sMaMon = m.sMaMon', 'inner')
+                -> where('sv.sNamThi',substr($today,6,4));
+                if($khoa != '13'){
+                    $this->db-> where('sv.FK_sMakhoa', $khoa);
+                }
+
+                if($mon){
+                   $this->db-> where('sv.sMaMon', $mon);
+                }
+               $this->db->order_by('sv.sGhiChu ASC, sv.sMaMon DESC,  sv.sTen ASC, k.sTenKhoa ASC');
+        $sql = $this->db->get()->result_array();
+        return $sql;
     }
     public function listKhoa($makhoa = 13)
     {

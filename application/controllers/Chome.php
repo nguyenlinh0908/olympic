@@ -258,7 +258,7 @@
                 'thongbao'  => $thongbao,
                 'timeline'  => $timeline,
                 'list'   => $list,
-                'img_title' => 't-dangcai.png',
+                'img_title' => 't-dangcai.jpg',
             );
 
 

@@ -4,7 +4,7 @@
                     <div class="tit-thongbao">
                         <div class="clearfix vi-header">
                             <div class="vi-left-title pull-left">
-                                <a href=""><img src="{public_url('site')}/img/t-dangcai.png" alt=""></a>
+                                <a href=""><img src="{public_url('site')}/img/t-dangcai.jpg" alt=""></a>
                                 <!-- <div class="thongbao">Thông báo</div> -->
                             </div>
                         </div>
