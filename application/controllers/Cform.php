@@ -82,7 +82,7 @@ class Cform extends CI_Controller{
                     'dNgaySinh'     => $dob,
                     'sSDT'        	=> $sdt,
                     'sEmail'        => $mail,
-                    'sTruong'       => mb_convert_case($masv, MB_CASE_TITLE, "UTF-8"),
+                    'sTruong'       => mb_convert_case($truong, MB_CASE_TITLE, "UTF-8"),
                 );
                 if($thisinh->FK_sMaKhoa == 14){
                     $info['FK_sMaKhoa'] = 14;
