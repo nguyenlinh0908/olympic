@@ -26,10 +26,14 @@
             $input['where']['FK_sIDLoaiTin '] = 1;
             $gioithieu = $this->Mbaiviet->get_list($input);
 
+            $input['limit'] = array(4, 0);
+            $input['where']['FK_sIDLoaiTin '] = 2;
+            $tb = $this->Mbaiviet->get_list($input);
+
             $input['limit'] = array(1, 0);
             $input['where']['FK_sIDLoaiTin '] = 6;
             $dangcai = $this->Mbaiviet->get_list($input);
-            
+
             $input['limit'] = array(4, 0);
             $input['where']['FK_sIDLoaiTin '] = 4;
             $ontap = $this->Mbaiviet->get_list($input);
@@ -43,6 +47,7 @@
                 'thongbao'  => $thongbao,
                 'gioithieu' => $gioithieu,
                 'ontap'     => $ontap,
+                'tb'        => $tb,
                 'timeline'  => $timeline,
                 'listvid'   => $listvid,
                 'dangcai'   => $dangcai,
@@ -156,7 +161,6 @@
             
             $this->load->view('layout/Vlayout', $data);
         }
-
         public function tochuc()
         {
             $page = array(
