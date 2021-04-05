@@ -8,12 +8,12 @@
 		
 		<div class="horControlB menu_action">
 			<ul>
-				<li><a href="{base_url('themtaikhoan')}">
+				<li><a href="{base_url('admin/themtaikhoan')}">
 					<img src="{public_url('admin')}/images/icons/control/16/add.png">
 					<span>Thêm mới</span>
 				</a></li>
 				
-				<li><a href="{base_url('admintaikhoan')}">
+				<li><a href="{base_url('admin/admintaikhoan')}">
 					<img src="{public_url('admin')}/images/icons/control/16/list.png">
 					<span>Danh sách</span>
 				</a></li>
@@ -88,11 +88,11 @@
                         </td>
 						
 						<td class="option">
-							 <a href="{base_url('edit-taikhoan/')}{$row.sIDTaiKhoan}" title="Chỉnh sửa" class="tipS ">
+							 <a href="{base_url('admin/edit-taikhoan/')}{$row.sIDTaiKhoan}" title="Chỉnh sửa" class="tipS ">
 							<img src="{public_url('admin')}/images/icons/color/edit.png" />
 							</a>
 							
-							<a href="{admin_url('Caccount/delete/')}{$row.sIDTaiKhoan}" title="Xóa" class="tipS verify_action" >
+							<a href="{base_url('admin/delete/')}{$row.sIDTaiKhoan}" title="Xóa" class="tipS verify_action" >
 							    <img src="{public_url('admin')}/images/icons/color/delete.png" />
 							</a>
 						</td>

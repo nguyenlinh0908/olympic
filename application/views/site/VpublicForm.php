@@ -70,20 +70,12 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-row">
-<<<<<<< HEAD
                                     <div class="col-lg-12">
                                         <label><b>Ảnh hồ sơ (*Tải ảnh hồ sơ tỷ lệ 3x4)</b></label>
                                         <span style="color: red;">*</span>
                                         
                                         <input type="file" class="form-control" id="image_hoso" name="image_hoso" multiple="true">
                                         <a style="text-align:right !important;
-=======
-                                        <div class="col-lg-12">
-                                            <label><b>Ảnh hồ sơ (*Tải ảnh hồ sơ tỷ lệ 3x4)</b></label>
-                                            <span style="color: red;">*</span>
-                                            <input type="file" class="form-control" id="image_hoso" name="image_hoso" multiple="true">
-                                            <a style="text-align:right !important;
->>>>>>> 7e1f64461646bc7c91b6061406d4a49494323b63
     border-width: 0 2px 2px;
     font-weight: bold;
     border-color: #ad9a9a;
@@ -94,15 +86,10 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-<<<<<<< HEAD
                                                         <img frameborder="0" scrolling="no" class="hide-album" id="output" src="#" 
                                                         class="fluid modal-title" style="overflow:hidden;height:100%;width:100%" 
                                                         height="100%" width="100%" alt="image_hoso">
                                                         <figcaption  class="figure-caption text-center"></figcaption>
-=======
-                                                        <img frameborder="0" scrolling="no" class="hide-album" id="blah" src="#" class="fluid modal-title" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" alt="image_hoso">
-                                                        <figcaption class="figure-caption text-center"></figcaption>
->>>>>>> 7e1f64461646bc7c91b6061406d4a49494323b63
                                                     </div>
                                                 </div>
                                             </div>

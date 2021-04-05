@@ -37,6 +37,13 @@ class MY_Model extends CI_Model {
 		}
 		
 	}
+	function createAccount($data){
+		if(!empty($data)){
+			$this->db->insert($this->table, $data);
+		}else{
+			return false;
+		}
+	}
 	function createPost($data){
 		if(!empty($data)){
 			$this->db->insert($this->table, $data);
@@ -88,7 +95,7 @@ class MY_Model extends CI_Model {
 	 */
 	function delete($id)
 	{
-		if (!$id)
+		if (isset($id) == false)
 		{
 			return FALSE;
 		}
@@ -139,14 +146,12 @@ class MY_Model extends CI_Model {
 	 */
 	function get_info($id, $field = '')
 	{
-		if (!$id)
+		if (isset($id) == false)
 		{
 			return FALSE;
 		}
-	 	
 	 	$where = array();
-	 	$where[$this->key] = $id;
-	 	
+	 	$where[$this->key] = $id;	 	
 	 	return $this->get_info_rule($where, $field);
 	}
 	

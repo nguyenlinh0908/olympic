@@ -66,7 +66,7 @@
                 <div class="formRow">
                     <label class="formLeft" for="param_username">Username:<span class="req">*</span></label>
                     <div class="formRight">
-                        <span class="oneTwo"><input  name="username" value="{$info.sTenTaiKhoan}" id="param_username" _autocheck="true" type="text" disabled style="background: #d2d2d2;" /></span>
+                        <span class="oneTwo"><input  name="username" value="{$info.sTenTaiKhoan}" id="param_username" _autocheck="true" type="text"/></span>
                         <span name="name_autocheck" class="autocheck"></span>
                         <div name="name_error" class="clear error">{form_error('username')}</div>
                     </div>

@@ -100,14 +100,17 @@ Class Caccount extends MY_Controller
                 $password = $this->input->post('password');
                 
                 $data = array(
-                    'sIDTaiKhoan' => $this->Maccount->id(), 
-                    'sMaKhoa'     => $id_khoa,
-                    'sIDQuyen'  => $id_quyen,
-                    'sTenTaiKhoan' => $username,
-                    'sMatKhau' => md5($password)
+                    'sIDTaiKhoan'   => $this->Maccount->id(), 
+                    'sMaKhoa'       => $id_khoa,
+                    'sIDQuyen'      => $id_quyen,
+                    'sTenTaiKhoan'  => $username,
+                    'sMatKhau'      => md5($password)
                 );
-                if($this->Maccount->create($data))
+                
+              
+                if($this->Maccount->createAccount($data))
                 {
+                  //  setToast('success', 'Đăng nhập thành công');
                     //tạo ra nôi dung thông báo
                     $this->session->set_flashdata('message', 'Thêm mới thành công');
                 }else{
@@ -138,6 +141,7 @@ Class Caccount extends MY_Controller
      * hàm sửa thông tin quản trị viên
      */
     function edit($idAccount){
+        //pre($idAccount);
         
         $this->load->library('form_validation');
         $this->load->helper('form');
@@ -153,7 +157,7 @@ Class Caccount extends MY_Controller
         $info = $this->Maccount->get_info($idAccount);
         if(!$info){
             $this->session->set_flashdata('message', 'Không tồn tại id này');
-            redirect(admin_url('admin'));
+            redirect(base_url('admin/admintaikhoan'));
         }
         $info = json_decode(json_encode($info), true);
         //Load khoa
@@ -181,19 +185,21 @@ Class Caccount extends MY_Controller
                 $username = $this->input->post('username');
                 if ($this->input->post('password'))
                 $password = $this->input->post('password');
-                if ($this->input->post('password'))
+                if (isset($password) == true)
                 $data = array(
-                    'sMaKhoa'     => $id_khoa,
-                    'sIDQuyen'  => $id_quyen,
-                    'sMatKhau' => md5($password)
+                    'sMaKhoa'       => $id_khoa,
+                    'sTenTaiKhoan'  => $username,
+                    'sIDQuyen'      => $id_quyen,
+                    'sMatKhau'      => md5($password)
                 );
                 else{
                     $data = array(
                         'sMaKhoa '     => $id_khoa,
                         'sIDQuyen'  => $id_quyen,
+                        'sTenTaiKhoan'  => $username
                     );
                 }
-                if($this->Maccount->update($id, $data))
+                if($this->Maccount->update($idAccount, $data))
                 {
                     //tạo ra nôi dung thông báo
                     $this->session->set_flashdata('message', 'Cập nhật thành công');
@@ -201,7 +207,7 @@ Class Caccount extends MY_Controller
                     $this->session->set_flashdata('message', 'Cập nhật thất bại');
                 }
                 //Chuyển tới trang danh sách
-                redirect(base_url('admintaikhoan'));
+                redirect(base_url('admin/admintaikhoan'));
             }
         }
 
@@ -228,26 +234,25 @@ Class Caccount extends MY_Controller
      /*
      * HÀM XOÁ DỮ LIỆU
      */
-    function delete(){
-
+    function delete($id){
+       // pre($id);
         //lấy id cần chỉnh sửa
-        $id = $this->uri->rsegment('3');
+        //$id = $this->uri->rsegment('3');
 
         //ép kiểu 
-        $id = intval($id);
-
+        //$id = intval($id);
         //lấy thông tin của id để xem có tồn tại không
         $info = $this->Maccount->get_info($id);
         if(!$info){
             $this->session->set_flashdata('message', 'Không tồn tại id này');
-            redirect(admin_url('Caccount'));
+            redirect(base_url('admin/admintaikhoan'));
         }
 
 
         //thực hiện xoá
-        $this->Maccount->delete($id);
+        $this->Maccount->delete($info->sIDTaiKhoan);
         $this->session->set_flashdata('message', 'Xoá dữ liệu thành công');
-        redirect(admin_url('Caccount'));
+        redirect(base_url('admin/admintaikhoan'));
     }
 
     /*
@@ -267,6 +272,3 @@ Class Caccount extends MY_Controller
 
 
 }
-
-
-

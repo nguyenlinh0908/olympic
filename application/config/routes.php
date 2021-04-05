@@ -39,7 +39,7 @@ $route['admin/edit/(:num)']              = 'admin/Cbaiviet/edit/$1';
 $route['admin/edit-taikhoan/(:num)']      = 'admin/Caccount/edit/$1';
 $route['admin/themtainguyen']           = 'admin/Cimg/add';
 $route['admin/edit-img/(:num)']           = 'admin/Cimg/edit/$1';
-
+$route['admin/delete/(:num)']              = 'admin/Caccount/delete/$1';
 // $route['admintrangchu']        = 'Chome/index';
 
 //$route['baiviet/(:num)'] 		  = 'Cbaiviet/index/$1';
