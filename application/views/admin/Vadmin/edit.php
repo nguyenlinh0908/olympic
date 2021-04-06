@@ -7,12 +7,12 @@
 		
 		<div class="horControlB menu_action">
 			<ul>
-				<li><a href="{base_url('themtaikhoan')}">
+				<li><a href="{base_url('admin/themtaikhoan')}">
 					<img src="{public_url('admin')}/images/icons/control/16/add.png">
 					<span>Thêm mới</span>
 				</a></li>
 				
-				<li><a href="{base_url('admintaikhoan')}">
+				<li><a href="{base_url('admin/admintaikhoan')}">
 					<img src="{public_url('admin')}/images/icons/control/16/list.png">
 					<span>Danh sách</span>
 				</a></li>
