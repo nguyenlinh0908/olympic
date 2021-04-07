@@ -319,7 +319,7 @@ a:hover{
   transition: 0.5s;
 }
 a:focus, a:hover {
-  color: #42a6ff !important;
+  color: #0082d0 !important;
 }
 .navbar{
   margin-bottom: 0px !important;
@@ -330,10 +330,8 @@ a:focus, a:hover {
 }
 
 .navbar-default{
-  border-bottom: 5px solid #0065f1c7 !important;
-  font-weight: bold;
   font-size: 18px;
-  background-color: #3191ff    !important;
+  background-color: #002F67    !important;
 }
 .navbar-collapse{
   background-color: #0077ff00  !important;
@@ -382,7 +380,6 @@ a:focus, a:hover {
     height: 100px;
     color: white;
     margin-top: 20px;
-    font-weight: bold;
     background-color: #0065f1c7;
 }
 
@@ -392,8 +389,7 @@ a:focus, a:hover {
 }
 
 .address_detail{
-  border-top: 7px solid #66c7ff;
-  background: #0065f1c7;
+  background: #002F67;
 }
 
 .l_content{
@@ -426,7 +422,6 @@ a:focus, a:hover {
 .panel-body{
   padding: 15px !important;
   font-size: 21px !important;
-  font-weight: bold !important;
 }
 
 .icon i{
@@ -510,7 +505,7 @@ a{
     /* top: 16px; */
     /* left: 75%; */
     /* margin-left: 10px; */
-    background-color: #4fa9ff;
+    background-color: #002f67;
     z-index: 100;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
