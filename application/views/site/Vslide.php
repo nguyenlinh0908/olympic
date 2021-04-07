@@ -6,23 +6,5 @@
           <img src="{base_url('upload/slide/')}{$r.sLink}" alt="">
        </div>
     {/foreach}
-    <div class="marquee">
-      <img src="{base_url('upload/slide/')}{$r.sLink}" alt="">
-   </div>
-   <div class="marquee">
-    <img src="{base_url('upload/slide/')}{$r.sLink}" alt="">
- </div>
- <div class="marquee">
-  <img src="{base_url('upload/slide/')}{$r.sLink}" alt="">
-</div>
-<div class="marquee">
-  <img src="{base_url('upload/slide/')}{$r.sLink}" alt="">
-</div>
-<div class="marquee">
-  <img src="{base_url('upload/slide/')}{$r.sLink}" alt="">
-</div>
-<div class="marquee">
-  <img src="{base_url('upload/slide/')}{$r.sLink}" alt="">
-</div>
 </marquee>
 </div>
