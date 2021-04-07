@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 /**
 ------- GENERAL STYLES
 **/
@@ -13,11 +13,11 @@
 
 html,
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100vh;
-  background: #f7f3ea; }
+  background: #d7e8f1; }
 img{
   width: 100%;
   height: 100%;
@@ -35,7 +35,19 @@ img{
   top: -40%;
   width: 180%;
   z-index: 2; }
+/* marquee custom */
+.marquee{
+  display: inline-block;
+  height: 300px;
+  width: 450px;
+}
 
+.marquee img{
+  width:100%;
+  border-radius: 10px;
+  border: 2px solid #002f67;
+}
+/* custom marquee end */
 .carousel-section {
   position: relative;
   margin-top: 10px;
@@ -206,7 +218,7 @@ h1 {
   top: 0;
   left: 0;
   border-radius: 10px;
-  border: 5px solid #71d8ff;
+  border: 2px solid #002f67;
   right: 0;
   opacity: 1;
   transition: -webkit-transform 0.5s ease 0s;
