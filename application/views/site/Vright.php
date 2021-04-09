@@ -1,3 +1,4 @@
+        
         <div class="right col-lg-4">
             <!-- <div class="r_noidung col-lg-12">
                 <div class="vongloai row">
@@ -94,5 +95,60 @@
                     {/foreach}
                 </div>
             </div>
-        </div>
-        
+
+            <!-- slide -->
+            <div class="b_right col-lg-12">
+                <div style="height: 380px;" class="r_content col-lg-12">
+                    <div class="tit-thongbao">
+                        <div class="clearfix vi-header">
+                            <div class="vi-right-title pull-right col-lg-12">
+                                <img src="{public_url('site')}/img/title-right-blue.png" alt="">
+                                <div class="center_text">CẢM NHẬN VỀ CUỘC THI</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body r-nd-thongbao">
+                        <div class="tintuc2 row">     
+                            <!-- <img src="{public_url('site')}/img/slide1.jpg" alt=""> -->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                    <img src="{public_url('site')}/img/tn-1615360612.png" alt="Chania">
+                                    <div class="carousel-caption" style="width: 405px;">
+                                        <div class="text-caption" style="font-size: 14px;">
+                                            <h3>Sinh viên</h3>
+                                            <p>Cuộc thi “Olympic Tin học – Tiếng Anh không chuyên lần thứ X, năm 2021” </p>
+                                        </div>
+                                       
+                                    </div>
+                                    </div>
+ 
+                                    <div class="item">
+                                    <img src="{public_url('site')}/img/c10.png" alt="Chicago">
+                                    <div class="carousel-caption" style="width: 405px; ">
+                                        <div class="text-caption" style="font-size: 14px;">
+                                            <h3>Sinh viên</h3>
+                                            <p>Cuộc thi “Olympic Tin học – Tiếng Anh không chuyên lần thứ X, năm 2021” </p>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+
+                                </div>
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- hết slide -->
+    </div>
