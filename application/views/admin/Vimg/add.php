@@ -54,6 +54,7 @@
 					<option value="slide">Ảnh Slide</option>
 					<option value="album">Ảnh Album</option>
 					<option value="video">Video</option>
+					<option value="binhluan">Ảnh bình luận</option>
 				</select>
 			</div>
 			
