@@ -43,6 +43,12 @@
             $input['where']['type'] = 'video';
             $listvid = $this->Mimg->get_list($input);
             
+
+            $input = array();
+            $input['limit'] = array(8, 0);
+            $input['where']['type'] = 'preview';
+            $pre = $this->Mimg->get_list($input);
+
             $dLeft = array(
                 'thongbao'  => $thongbao,
                 'gioithieu' => $gioithieu,
@@ -50,6 +56,7 @@
                 'tb'        => $tb,
                 'timeline'  => $timeline,
                 'listvid'   => $listvid,
+                'pre'       => $pre,
                 'dangcai'   => $dangcai,
             );
 
@@ -68,6 +75,7 @@
                 'slide'     => 'site/Vslide',
                 'right'     => 'site/Vright',
                 'album'     => 'site/Vvideo',
+                'inter'     => 'site/Vinterview',
                 'dLeft'     => $dLeft,
                 'page'      => $page,
                 'carousel'  => $carousel,

@@ -12,9 +12,13 @@
             if(isset($right)){
                 $this->parser->parse($right);
             }
+            if(isset($inter)){
+                $this->parser->parse($inter);
+            }
             if(isset($album)){
                 $this->parser->parse($album);
             }
+
         echo '</div>';
     echo '</div>';
     echo '<div class="address_detail address_detail col-lg-12">';

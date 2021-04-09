@@ -54,6 +54,7 @@
 									<option value="slide">Slide</option>
 									<option value="album">Album</option>
 									<option value="video">Video</option>
+									<option value="preview">Phỏng vấn</option>
 								</select>
 							</td>
 							
