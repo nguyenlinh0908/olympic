@@ -12,63 +12,23 @@
 
         
          <div class="panel-body nd-thongbao wrapper_tp">
-           
+           {foreach $pre as $key => $pr}        
+            {if $key == 2 || $key == 3 || $key == 6 || $key == 7}
+               <div class="img col-lg-3" style="margin-bottom:1rem;">
+                  <div class="interviewer">
+                     <img class="inn-album" src="{base_url('upload/slide/')}{$pr.sLink}" title="{$pr.sMoTa}">
+                     <div class="interview_text_left">{$pr.sMoTa}</div>
+                  </div>
+               </div>
+            {else}
             <div class="img col-lg-3" style="margin-bottom:1rem;">
                <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[0].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text">{$pre[0].sMoTa}</div>
+                  <img class="inn-album" src="{base_url('upload/slide/')}{$pr.sLink}" title="{$pr.sMoTa}">
+                  <div class="interview_text">{$pr.sMoTa}</div>
                </div>
             </div>
-
-            <div class="img col-lg-3" style="margin-bottom:1rem;">
-               <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[1].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text">{$pre[1].sMoTa}</div>
-               </div>
-            </div>
-
-            <div class="img col-lg-3" style="margin-bottom:1rem;">
-               <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[2].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text_left">{$pre[2].sMoTa}</div>
-               </div>
-            </div>
-
-            <div class="img col-lg-3" style="margin-bottom:1rem;">
-               <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[3].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text_left">{$pre[3].sMoTa}</div>
-               </div>
-            </div>
-
-            <div class="img col-lg-3" style="margin-bottom:1rem;">
-               <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[4].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text">{$pre[4].sMoTa}</div>
-               </div>
-            </div>
-
-            <div class="img col-lg-3" style="margin-bottom:1rem;">
-               <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[5].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text">{$pre[5].sMoTa}</div>
-               </div>
-            </div>
-
-            <div class="img col-lg-3" style="margin-bottom:1rem;">
-               <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[6].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text_left">{$pre[6].sMoTa}</div>
-               </div>
-            </div>
-
-            <div class="img col-lg-3" style="margin-bottom:1rem;">
-               <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pre[7].sLink}" title="{$r.sMoTa}">
-                  <div class="interview_text_left">{$pre[7].sMoTa}</div>
-               </div>
-            </div>
-          
+            {/if}
+            {/foreach}
          </div>
       </div>
    </div>
