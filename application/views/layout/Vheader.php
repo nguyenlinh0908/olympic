@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{public_url()}site/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="{public_url()}site/style.css">
     <link rel="shortcut icon" href="{public_url()}site/img/logotruong.png" />
+
+
     
     <script type="text/javascript" src="{public_url('site/js/jquery-1.10.2.min.js')}"></script>
     <script src="{base_url('plugins/jquery-3.5.1.min.js')}"></script>

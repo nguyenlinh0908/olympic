@@ -1,4 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.wrapper_tp{
+  /* display: inline-flex; */
+}
+.interviewer{
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.interviewer .interview_text{
+  position: absolute;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220%;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+  background:#1e9dcb;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/*left*/
+.interviewer .interview_text_left{
+  position: absolute;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220%;
+  height: 100%;
+  right: 0;
+  z-index: 1;
+  background:#1e9dcb;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.interviewer:hover .interview_text{
+  left: 105%;
+  opacity: 0.9;
+  pointer-events: auto;
+}
+  /*left*/
+.interviewer:hover .interview_text_left{
+  right: 105%;
+  opacity: 0.9;
+  pointer-events: auto;
+}
+
+.interviewer .interview_text:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #1e9dcb;
+  left: 0;
+  bottom: 45%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  /*left*/
+.interviewer .interview_text_left:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #1e9dcb;
+  right: -15px;
+  bottom: 45%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
 .d-none{
   position: absolute !important;
     display: none !important;

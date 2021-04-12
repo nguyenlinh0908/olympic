@@ -54,6 +54,7 @@
 					<option value="slide"{if $tn->Type=='slide'}selected{/if} >Ảnh Slide</option>
 					<option value="album"{if $tn->Type=='album'}selected{/if}>Ảnh Album</option>
 					<option value="video"{if $tn->Type=='video'}selected{/if}>Video</option>
+					<option value="preview" {if $tn->Type=='preview'}selected{/if}>Ảnh phỏng vấn</option>
 				</select>
 			</div>
 			

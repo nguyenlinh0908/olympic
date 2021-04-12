@@ -1,3 +1,4 @@
+
 <div class="main_left col-lg-12">
     <div class="b_left col-lg-12">
         <div class="l_content col-lg-12 album">
@@ -35,4 +36,4 @@ $("div.yturl").each(function(){
     }
 });
 </script>
-                    
+      

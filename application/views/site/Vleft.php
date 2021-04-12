@@ -15,7 +15,7 @@
     color: #337ab7; text-align:justify;">{$dangcai[0]['tTomTat']}</a>
                         </div>
                         <div class="xemthem">
-                            <a href="{base_url('dvdangcai')}">Xem thêm >></a>
+                            <a href="{base_url('/baiviet/31')}">Xem thêm >></a>
                         </div>
                     </div>
                 </div>
@@ -130,4 +130,5 @@
                     </div>
                 </div>
             </div>
+            
         </div>
