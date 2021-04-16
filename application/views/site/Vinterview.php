@@ -16,14 +16,14 @@
             {if $key == 2 || $key == 3 || $key == 6 || $key == 7}
                <div class="img col-lg-3" style="margin-bottom:1rem;">
                   <div class="interviewer">
-                     <img class="inn-album" src="{base_url('upload/slide/')}{$pr.sLink}" title="{$pr.sMoTa}">
+                     <img class="inn-album" src="{base_url('upload/slide/')}{$pr.sLink}" title="">
                      <div class="interview_text_left">{$pr.sMoTa}</div>
                   </div>
                </div>
             {else}
             <div class="img col-lg-3" style="margin-bottom:1rem;">
                <div class="interviewer">
-                  <img class="inn-album" src="{base_url('upload/slide/')}{$pr.sLink}" title="{$pr.sMoTa}">
+                  <img class="inn-album" src="{base_url('upload/slide/')}{$pr.sLink}" title="">
                   <div class="interview_text">{$pr.sMoTa}</div>
                </div>
             </div>

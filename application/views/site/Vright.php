@@ -113,28 +113,17 @@
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner">
-                                    <div class="item active">
-                                    <img src="{public_url('site')}/img/tn-1615360612.png" alt="Chania">
-                                    <div class="carousel-caption" style="width: 405px;">
-                                        <div class="text-caption" style="font-size: 14px;">
-                                            <h3>Sinh viên</h3>
-                                            <p>Cuộc thi “Olympic Tin học – Tiếng Anh không chuyên lần thứ X, năm 2021” </p>
-                                        </div>
-                                       
-                                    </div>
-                                    </div>
- 
+                                    {foreach $des as $ds}
                                     <div class="item">
-                                    <img src="{public_url('site')}/img/c10.png" alt="Chicago">
-                                    <div class="carousel-caption" style="width: 405px; ">
-                                        <div class="text-caption" style="font-size: 14px;">
-                                            <h3>Sinh viên</h3>
-                                            <p>Cuộc thi “Olympic Tin học – Tiếng Anh không chuyên lần thứ X, năm 2021” </p>
+                                        <img src="{base_url('upload/slide/')}{$ds.sLink}" alt="ảnh của cuộc thi olympic">
+                                        <div class="carousel-caption" style="width: 100%; ">
+                                            <div class="text-caption" style="font-size: 14px;">
+                                                {$ds.sMoTa}
+                                             </div>
+                                            
                                         </div>
-                                        
                                     </div>
-                                    </div>
-
+                                    {/foreach}
                                 </div>
                                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -152,3 +141,8 @@
             </div>
             <!-- hết slide -->
     </div>
+
+
+<script>
+$( ".item" ).first().addClass( "active" );
+</script>

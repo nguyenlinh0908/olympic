@@ -49,6 +49,11 @@
             $input['where']['type'] = 'preview';
             $pre = $this->Mimg->get_list($input);
 
+            $input = array();
+            $input['limit'] = array(8, 0);
+            $input['where']['type'] = 'describe';
+            $des = $this->Mimg->get_list($input);
+
             $dLeft = array(
                 'thongbao'  => $thongbao,
                 'gioithieu' => $gioithieu,
@@ -57,6 +62,7 @@
                 'timeline'  => $timeline,
                 'listvid'   => $listvid,
                 'pre'       => $pre,
+                'des'       => $des,
                 'dangcai'   => $dangcai,
             );
 

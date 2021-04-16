@@ -43,8 +43,11 @@
 </div>
 			<div class="formRow">
 			<div class="form-group">
-				<label for="name">Tiêu đề</label>
+				<!-- <label for="name">Tiêu đề</label>
 				<input type="text" class="form-control" name="tieude" value="{$tn->sMoTa}" >
+				<div name="name_error" class="clear error">{form_error('tieude')}</div>
+				<label for="name">Tiêu đề</label> -->
+				<textarea name="tieude" id="param_tieude" cols="4">{$tn->sMoTa}</textarea>
 				<div name="name_error" class="clear error">{form_error('tieude')}</div>
 			</div>
 			
@@ -54,6 +57,8 @@
 					<option value="slide"{if $tn->Type=='slide'}selected{/if} >Ảnh Slide</option>
 					<option value="album"{if $tn->Type=='album'}selected{/if}>Ảnh Album</option>
 					<option value="video"{if $tn->Type=='video'}selected{/if}>Video</option>
+					<option value="describe"{if $tn->Type=='describe'}selected{/if}>Về cuộc thi</option>
+					<option value="preview"{if $tn->Type=='preview'}selected{/if}>Phỏng vấn</option>
 				</select>
 			</div>
 			
@@ -137,4 +142,8 @@ $("#seeAnotherField").change(function() {
 });
 $("#seeAnotherField").trigger("change");
 
+</script>
+
+<script type="text/javascript">               
+	let editor = CKEDITOR.replace('param_tieude');
 </script>
