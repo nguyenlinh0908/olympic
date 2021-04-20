@@ -98,12 +98,12 @@
 
             <!-- slide -->
             <div class="b_right col-lg-12">
-                <div style="height: 380px;" class="r_content col-lg-12">
+                <div style="height: 530px;" class="r_content col-lg-12">
                     <div class="tit-thongbao">
                         <div class="clearfix vi-header">
                             <div class="vi-right-title pull-right col-lg-12">
                                 <img src="{public_url('site')}/img/title-right-blue.png" alt="">
-                                <div class="center_text">CẢM NHẬN VỀ CUỘC THI</div>
+                                <div class="center_text">NÓI VỀ CUỘC THI</div>
                             </div>
                         </div>
                     </div>
@@ -120,16 +120,15 @@
                                             <div class="text-caption" style="font-size: 14px;">
                                                 {$ds.sMoTa}
                                              </div>
-                                            
                                         </div>
                                     </div>
                                     {/foreach}
                                 </div>
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="height: 450px;">
                                     <span class="glyphicon glyphicon-chevron-left"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next" style="height: 450px;">
                                     <span class="glyphicon glyphicon-chevron-right"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
