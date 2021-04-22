@@ -18,6 +18,7 @@ $route['dvdangcai']               ='Chome/dvdangcai';
 $route['danhsach']                ='Chome/danhsach';
 $route['dangky']                  ='Cform';
 $route['thongbao']                = 'Chome/thongbao';
+$route['cuocthi']                = 'Chome/cuocthi';
 
 $route['dangnhap']                = 'Clogin';
 $route['admindanhsach']           = 'Clist';

@@ -10,7 +10,6 @@
             $page = array(
                 'title' => 'Trang chủ'
             );
-            
 
             $this->load->model('Mimg');
             $this->load->model('Mbaiviet');
@@ -37,12 +36,15 @@
             $input['limit'] = array(4, 0);
             $input['where']['FK_sIDLoaiTin '] = 4;
             $ontap = $this->Mbaiviet->get_list($input);
+
+            $input['limit'] = array(4, 0);
+            $input['where']['FK_sIDLoaiTin '] = 8;
+            $danhsach = $this->Mbaiviet->get_list($input);
             
             $input = array();
             $input['limit'] = array(13, 0);
             $input['where']['type'] = 'video';
             $listvid = $this->Mimg->get_list($input);
-            
 
             $input = array();
             $input['limit'] = array(8, 0);
@@ -58,10 +60,11 @@
                 'thongbao'  => $thongbao,
                 'gioithieu' => $gioithieu,
                 'ontap'     => $ontap,
+                'danhsach'  => $danhsach,
                 'tb'        => $tb,
                 'timeline'  => $timeline,
                 'listvid'   => $listvid,
-                'pre'       => $pre,
+                'pre'       => $pre, 
                 'des'       => $des,
                 'dangcai'   => $dangcai,
             );
@@ -175,6 +178,7 @@
             
             $this->load->view('layout/Vlayout', $data);
         }
+       
         public function tochuc()
         {
             $page = array(
@@ -320,6 +324,38 @@
             );
             $data = array(
                 'left'      => 'site/Valbum',
+                'dLeft'     => $dLeft,
+                'page'      => $page,
+            );
+            $data['messages'] = $messages;
+            
+            $this->load->view('layout/Vlayout', $data);
+        }
+        function cuocthi(){
+            $page = array(
+                'title' => 'Cuộc thi'
+            );
+            
+            $this->load->model('Mimg');
+            // $input = array();
+            // $input['limit'] = array(1, 0);
+            // $input['where']['FK_sIDLoaiTin '] = 7;
+            // $thongbao = $this->Mbaiviet->get_list($input);
+            $input = array();
+            $input['where']['type'] = 'preview';
+            // $listvid = $this->Mimg->get_list($input);
+            $pre = $this->Mimg->get_list($input);
+            $dLeft = array(
+                'img_title' => 't-cuocthi.png',
+                'pre'   => $pre,
+            );
+
+
+            $messages = array(
+                'messages'	=> $this->session->flashdata('messages'),
+            );
+            $data = array(
+                'left'      => 'site/Vinterview',
                 'dLeft'     => $dLeft,
                 'page'      => $page,
             );

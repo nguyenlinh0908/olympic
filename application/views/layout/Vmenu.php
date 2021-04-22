@@ -24,6 +24,7 @@
                     <li class="btn_menu"><a href="https://www.youtube.com/channel/UCzObwWgsS7pUgLQPR-i7UMw">Video</a></li>
                     <li class="btn_menu"><a href="{base_url('dvdangcai')}">Đơn vị đăng cai</a></li>
                     <li class="btn_menu"><a href="{base_url('danhsach')}">Danh sách</a></li>
+                    <li class="btn_menu"><a href="{base_url('cuocthi')}">Nói về cuộc thi</a></li>
                     <li class="btn_menu"><a href="{base_url('dangky')}">Đăng ký</a></li>
 
                 </ul>

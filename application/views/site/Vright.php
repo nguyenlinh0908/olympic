@@ -103,7 +103,7 @@
                         <div class="clearfix vi-header">
                             <div class="vi-right-title pull-right col-lg-12">
                                 <img src="{public_url('site')}/img/title-right-blue.png" alt="">
-                                <div class="center_text">NÓI VỀ CUỘC THI</div>
+                                <div class="center_text">GƯƠNG MẶT TIÊU BIỂU</div>
                             </div>
                         </div>
                     </div>
